@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="छत्रपती शिवाजी महाराजांकडून १०१ कालातीत धडे — भारताचे महान योद्धा राजे. नेतृत्व, शौर्य, विवेक आणि स्वराज्य प्रत्येक पिढीसाठी." />
+  <meta property="og:title" content="छत्रपती शिवाजी महाराज — प्रत्येक पिढीसाठी १०१ धडे" />
+  <meta property="og:description" content="मराठा साम्राज्याच्या संस्थापकांचे कालातीत ज्ञान. हर हर महादेव." />
+  <meta property="og:type" content="website" />
+  <title>छत्रपती शिवाजी महाराज — १०१ धडे</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Tiro+Devanagari+Marathi:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       DESIGN TOKENS — Royal Maratha Palette
+       ============================================================ */
+    :root {
+      --saffron:        #D4601A;
+      --saffron-light:  #F4A45A;
+      --saffron-pale:   #FDF0E6;
+      --saffron-dark:   #8B3410;
+      --gold:           #B8860B;
+      --gold-light:     #F5D060;
+      --gold-pale:      #FEF9E7;
+      --crimson:        #7A1B0E;
+      --crimson-dark:   #4A0D07;
+      --ivory:          #FBF6ED;
+      --ivory-dark:     #F0E8D8;
+      --dark:           #1C0E06;
+      --dark-mid:       #2E1A0E;
+      --dark-soft:      #3D2510;
+      --text-primary:   #1C0E06;
+      --text-secondary: #5C3D1E;
+      --text-muted:     #8B6B4A;
+      --border-light:   rgba(184,134,11,0.25);
+      --border-mid:     rgba(184,134,11,0.5);
+      --shadow-warm:    0 4px 24px rgba(180,80,10,0.12);
+      --shadow-heavy:   0 12px 48px rgba(120,30,10,0.2);
+    }
+
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background-color: var(--ivory);
+      color: var(--text-primary);
+      font-family: 'Tiro Devanagari Marathi', 'EB Garamond', Georgia, serif;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ============================================================
+       SCROLLBAR
+       ============================================================ */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--ivory-dark); }
+    ::-webkit-scrollbar-thumb { background: var(--saffron); border-radius: 4px; }
+
+    /* ============================================================
+       ORNAMENTAL BORDER PATTERN
+       ============================================================ */
+    .ornament-border {
+      height: 6px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--saffron) 0px, var(--saffron) 8px,
+        var(--gold) 8px, var(--gold) 16px,
+        var(--crimson) 16px, var(--crimson) 24px,
+        var(--gold) 24px, var(--gold) 32px
+      );
+    }
+
+    /* ============================================================
+       ROYAL MUDRA SEAL
+       ============================================================ */
+    .mudra-seal {
+      display: inline-block;
+      width: 110px;
+      height: 110px;
+      margin-bottom: 1.2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .mudra-seal svg {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 4px 18px rgba(245,208,96,0.45));
+      animation: sealGlow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes sealGlow {
+      from { filter: drop-shadow(0 4px 18px rgba(245,208,96,0.3)); }
+      to   { filter: drop-shadow(0 6px 28px rgba(245,208,96,0.7)); }
+    }
+
+    /* ============================================================
+       NAVIGATION
+       ============================================================ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(28, 14, 6, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      padding: 0 2rem;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-brand .mini-mudra {
+      width: 28px; height: 28px;
+      opacity: 0.85;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Tiro Devanagari Marathi', serif;
+      font-size: 13px;
+      color: rgba(245,208,96,0.7);
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold-light); }
+
+    /* ============================================================
+       HERO SECTION
+       ============================================================ */
+    .hero {
+      min-height: 100vh;
+      background-color: var(--crimson-dark);
+      background-image:
+        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(212,96,26,0.35) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 80% at 20% 80%, rgba(122,27,14,0.5) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 80% 20%, rgba(184,134,11,0.2) 0%, transparent 60%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 700px; height: 700px;
+      border-radius: 50%;
+      border: 1px solid rgba(245,208,96,0.08);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      border: 1px solid rgba(245,208,96,0.12);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .hero-flag {
+      font-size: 64px;
+      margin-bottom: 1rem;
+      animation: flagWave 2s ease-in-out infinite alternate;
+      filter: drop-shadow(0 4px 20px rgba(245,208,96,0.4));
+      position: relative; z-index: 1;
+    }
+
+    @keyframes flagWave {
+      from { transform: rotate(-4deg) scale(1); }
+      to   { transform: rotate(4deg) scale(1.05); }
+    }
+
+    .hero-title {
+      font-family: 'Tiro Devanagari Marathi', serif;
+      font-size: clamp(30px, 6vw, 62px);
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1.2;
+      letter-spacing: 1px;
+      text-shadow:
+        0 2px 4px rgba(0,0,0,0.5),
+        0 0 60px rgba(245,208,96,0.3);
+      margin-bottom: 1rem;
+      position: relative; z-index: 1;
+      animation: fadeUp 1s ease both;
+    }
+
+    .hero-subtitle {
+      font-family: 'Tiro Devanagari Marathi', serif;
+      font-size: clamp(13px, 2vw, 17px);
+      color: rgba(245,208,96,0.8);
+      letter-spacing: 2px;
+      margin-bottom: 2rem;
+      position: relative; z-index: 1;
+      animation: fadeUp 1s 0.2s ease both;
+    }
+
+    .hero-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 1.2rem auto 1.8rem;
+      max-width: 400px;
+      position: relative; z-index: 1;
+      animation: fadeUp 1s 0.35s ease both;
+    }
+
+    .hero-divider span {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+    }
+
+    .hero-divider-gem {
+      font-size: 18px;
+      color: var(--gold-light);
+    }
+
+    .hero-quote {
+      font-size: clamp(15px, 2.5vw, 21px);
+      font-style: italic;
+      color: rgba(251,246,237,0.92);
+      max-width: 700px;
+      line-height: 1.7;
+      position: relative; z-index: 1;
+      animation: fadeUp 1s 0.5s ease both;
+    }
+
+    .hero-quote cite {
+      display: block;
+      font-style: normal;
+      font-family: 'Tiro Devanagari Marathi', serif;
+      font-size: 13px;
+      color: rgba(245,208,96,0.7);
+      margin-top: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .hero-badges {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2.5rem;
+      position: relative; z-index: 1;
+      animation: fadeUp 1s 0.65s ease both;
+    }
+
+    .hero-badge {
+      background: rgba(245,208,96,0.12);
+      border: 1px solid rgba(245,208,96,0.3);
+      color: var(--gold-light);
+      font-family: 'Tiro Devanagari Marathi', serif;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      padding: 8px 20px;
+      border-radius: 30px;
+    }
+
+    .hero-scroll-hint {
+      position: absolute;
+      bottom: 2rem; left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(245,208,96,0.5);
+      font-family: 'Tiro Devanagari Marathi', serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      animation: bounce 2s ease infinite;
+    }
+
+    @keyframes bounce {
+      0%,100% { transform: translateX(-50%) translateY(0); }
+      50%      { transform: translateX(-50%) translateY(8px); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ============================================================
+       SECTION WRAPPER
+       ============================================================ */
+    section { padding: 5rem 2rem; }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-eyebrow {
+      font-family: 'Tiro Devanagari Marathi', serif;
+      font-size: 13px;
+      color: var(--saffron);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Tiro Devanagari Marathi', serif;
+      font-size: clamp(22px, 4vw, 38px);
+      font-weight: 700;
+      color: var(--crimson);
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
+    .section-line {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .section-line span {
+      width: 80px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    .section-line span:last-child {
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    .section-line em {
+      font-style: normal;
+      font-size: 20px;
+    }
+
+    /* ============================================================
+       BIOGRAPHY SECTION
+       ============================================================ */
+    .bio-section { background: var(--dark); }
+
+    .bio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .bio-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(245,208,96,0.15);
+      border-radius: 12px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .bio-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--saffron), var(--gold));
+    }
+
+    .bio-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(245,208,96,0.35);
+    }
+
+    .bio-year {
+      font-family: 'Cinzel', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--gold-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .bio-event {
+      font-family: 'Tiro Devanagari Marathi', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--saffron-light);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.5px;
+    }
+
+    .bio-desc {
+      font-size: 15px;
+      color: rgba(251,246,237,0.75);
+      line-height: 1.75;
+    }
+
+    /* ============================================================
+       PILLARS SECTION
+       ============================================================ */
+    .pillars-section { background: var(--ivory); }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .pillar-card {
+      background: white;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      transition: all 0.3s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pillar-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--pillar-color, var(--saffron));
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    .pillar-card:hover::after { transform: scaleX(1); }
+
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-warm);
+      border-color: var(--border-mid);
+    }
+
+    .pillar-icon { font-size: 36px; margin-bottom: 1rem; }
+
+    .pillar-name {
+      font-family: 'Tiro Devanagari Marathi', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--crimson);
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    .pillar-count {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ============================================================
+       LESSONS SECTION
+       ============================================================ */
+    .lessons-section { background: var(--ivory-dark); }
+
+    .lessons-controls {
+      max-width: 900px;
+      margin: 0 auto 2.5rem;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 220px;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 12px 16px 12px 42px;
+      border: 1px solid var(--border-mid);
+      border-radius: 8px;
+      background: white;
+      font-family: 'Tiro Devanagari Marathi', serif;
+      font-size: 16px;
+      color: var(--text-primary);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .search-box input:focus {
+      border-color: var(--saffron);
+      box-shadow: 0 0 0 3px rgba(212,96,26,0.12);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px; top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 16px;
+      pointer-events: none;
+    }
+
+    .filter-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-pill {
+      padding: 8px 16px;
+      border-radius: 24px;
+      border: 1px solid var(--border-mid);
+      background: white;
+      color: var(--text-secondary);
+      font-family: 'Tiro Devanagari Marathi', serif;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-pill:hover {
+      border-color: var(--saffron);
+      color: var(--saffron-dark);
+    }
+
+    .filter-pill.active {
+      background: var(--crimson);
+      color: var(--gold-light);
+      border-color: var(--crimson);
+    }
+
+    .progress-wrap {
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .progress-track {
+      flex: 1;
+      height: 6px;
+      background: rgba(184,134,11,0.15);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--saffron), var(--gold-light));
+      border-radius: 3px;
+      transition: width 0.5s ease;
+      width: 0%;
+    }
+
+    .progress-text {
+      font-family: 'Tiro Devanagari Marathi', serif;
+      font-size: 13px;
+      color: var(--text-muted);
+      min-width: 100px;
+      text-align: right;
+    }
+
+    .lessons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .lesson-card {
+      background: white;
+      border: 1px solid var(--border-light);
+      border-left: 4px solid var(--card-accent, var(--saffron));
+      border-radius: 0 10px 10px 0;
+      padding: 18px 20px;
+      cursor: pointer;
+      transition: all 0.25s;
+      position: relative;
+    }
+
+    .lesson-card:hover {
+      box-shadow: var(--shadow-warm);
+      transform: translateX(4px);
+      border-left-width: 6px;
+    }
+
+    .lesson-card.studied {
+      background: var(--ivory);
+      opacity: 0.65;
+    }
+
+    .lesson-card.studied .lesson-title {
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .lesson-num {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 600;
+      min-width: 30px;
+      padding-top: 3px;
+    }
+
+    .lesson-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .lesson-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-style: italic;
+      margin-left: 42px;
+      margin-bottom: 10px;
+    }
+
+    .lesson-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-left: 42px;
+    }
+
+    .lesson-tag {
+      display: inline-block;
+      font-family: 'Tiro Devanagari Marathi', serif;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+
+    .check-btn {
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border-mid);
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+
+    .lesson-card.studied .check-btn {
+      background: var(--crimson);
+      border-color: var(--crimson);
+    }
+
+    .check-btn svg { opacity: 0; transition: opacity 0.2s; }
+    .lesson-card.studied .check-btn svg { opacity: 1; }
+
+    .tag-leadership { background: #FFF3CD; color: #7D4A00; }
+    .tag-warfare    { background: #FFE0E0; color: #8B0000; }
+    .tag-character  { background: #E0F4EE; color: #1B5E40; }
+    .tag-wisdom     { background: #E8F5E9; color: #1B5E20; }
+    .tag-governance { background: #EDE7F6; color: #4A148C; }
+    .tag-courage    { background: #FFF8E1; color: #8D4B00; }
+    .tag-faith      { background: #F9E6FF; color: #6A0072; }
+    .tag-diplomacy  { background: #E0F7FA; color: #006064; }
+
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 4rem;
+      color: var(--text-muted);
+      font-style: italic;
+      font-size: 18px;
+    }
+
+    /* ============================================================
+       QUOTE BANNER
+       ============================================================ */
+    .quote-banner {
+      background: var(--crimson-dark);
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote-banner::before {
+      content: '\201C';
+      position: absolute;
+      top: -20px; left: 5%;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 200px;
+      color: rgba(245,208,96,0.06);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .quote-banner blockquote {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: clamp(18px, 3vw, 26px);
+      font-style: italic;
+      color: var(--ivory);
+      line-height: 1.7;
+      position: relative; z-index: 1;
+    }
+
+    .quote-banner cite {
+      display: block;
+      font-style: normal;
+      font-family: 'Tiro Devanagari Marathi', serif;
+      font-size: 13px;
+      color: var(--gold-light);
+      letter-spacing: 2px;
+      margin-top: 1.5rem;
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    footer {
+      background: var(--dark);
+      color: rgba(251,246,237,0.6);
+      text-align: center;
+      padding: 3rem 2rem;
+      border-top: 1px solid rgba(245,208,96,0.1);
+    }
+
+    .footer-mudra {
+      width: 60px; height: 60px;
+      margin: 0 auto 1rem;
+      opacity: 0.85;
+    }
+
+    .footer-title {
+      font-family: 'Tiro Devanagari Marathi', serif;
+      font-size: 16px;
+      color: var(--gold-light);
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-sub {
+      font-size: 14px;
+      color: rgba(251,246,237,0.4);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-credits {
+      font-size: 13px;
+      color: rgba(245,208,96,0.4);
+      font-family: 'Tiro Devanagari Marathi', serif;
+      letter-spacing: 0.5px;
+    }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 640px) {
+      nav { padding: 0 1rem; }
+      .nav-links { display: none; }
+      section { padding: 3.5rem 1rem; }
+      .lessons-grid { grid-template-columns: 1fr; }
+      .bio-grid { grid-template-columns: 1fr; }
+      .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ============================================================
+       ANIMATIONS
+       ============================================================ */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================== ORNAMENT TOP ==================== -->
+  <div class="ornament-border"></div>
+
+  <!-- ==================== CHHATRAPATI MUDRA SVG (INLINE REUSABLE) ==================== -->
+  <!-- Royal Seal: Shivray mudra — Devanagari 'श्री' surrounded by lotus petals and a crown -->
+  <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="shivray-mudra" viewBox="0 0 120 120">
+      <!-- Outer ring -->
+      <circle cx="60" cy="60" r="56" fill="none" stroke="#F5D060" stroke-width="2.5"/>
+      <circle cx="60" cy="60" r="50" fill="none" stroke="#F5D060" stroke-width="0.8" stroke-dasharray="4 3"/>
+      <!-- Inner fill -->
+      <circle cx="60" cy="60" r="46" fill="#4A0D07"/>
+      <!-- Lotus petals (8) -->
+      <g stroke="#F5D060" stroke-width="1" fill="#7A1B0E">
+        <ellipse cx="60" cy="16" rx="6" ry="10" transform="rotate(0 60 60)"/>
+        <ellipse cx="60" cy="16" rx="6" ry="10" transform="rotate(45 60 60)"/>
+        <ellipse cx="60" cy="16" rx="6" ry="10" transform="rotate(90 60 60)"/>
+        <ellipse cx="60" cy="16" rx="6" ry="10" transform="rotate(135 60 60)"/>
+        <ellipse cx="60" cy="16" rx="6" ry="10" transform="rotate(180 60 60)"/>
+        <ellipse cx="60" cy="16" rx="6" ry="10" transform="rotate(225 60 60)"/>
+        <ellipse cx="60" cy="16" rx="6" ry="10" transform="rotate(270 60 60)"/>
+        <ellipse cx="60" cy="16" rx="6" ry="10" transform="rotate(315 60 60)"/>
+      </g>
+      <!-- Crown top -->
+      <polygon points="40,34 47,24 53,30 60,20 67,30 73,24 80,34" fill="#F5D060" stroke="#B8860B" stroke-width="0.8"/>
+      <!-- Central gem in crown -->
+      <circle cx="60" cy="27" r="4" fill="#D4601A" stroke="#F5D060" stroke-width="0.8"/>
+      <!-- Devanagari श्री  -->
+      <text x="60" y="72" text-anchor="middle" font-family="Tiro Devanagari Marathi, serif" font-size="26" font-weight="700" fill="#F5D060">श्री</text>
+      <!-- Bottom script: शिवराय -->
+      <text x="60" y="90" text-anchor="middle" font-family="Tiro Devanagari Marathi, serif" font-size="11" fill="rgba(245,208,96,0.85)">शिवराय</text>
+      <!-- Dot decorations -->
+      <circle cx="26" cy="60" r="2" fill="#F5D060" opacity="0.6"/>
+      <circle cx="94" cy="60" r="2" fill="#F5D060" opacity="0.6"/>
+      <circle cx="60" cy="104" r="2" fill="#F5D060" opacity="0.6"/>
+    </symbol>
+  </svg>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav aria-label="मुख्य नेव्हिगेशन">
+    <span class="nav-brand">
+      <svg class="mini-mudra" viewBox="0 0 120 120"><use href="#shivray-mudra"/></svg>
+      छत्रपती शिवाजी महाराज
+    </span>
+    <ul class="nav-links">
+      <li><a href="#history">इतिहास</a></li>
+      <li><a href="#pillars">आधारस्तंभ</a></li>
+      <li><a href="#lessons">१०१ धडे</a></li>
+      <li><a href="#wisdom">सुविचार</a></li>
+    </ul>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <header class="hero" role="banner">
+    <!-- Royal Mudra Seal -->
+    <div class="mudra-seal" aria-hidden="true">
+      <svg viewBox="0 0 120 120"><use href="#shivray-mudra"/></svg>
+    </div>
+
+    <div class="hero-flag" aria-hidden="true"></div>
+    <h1 class="hero-title">छत्रपती<br/>शिवाजी महाराज</h1>
+    <p class="hero-subtitle">मराठा साम्राज्याचे संस्थापक &nbsp;·&nbsp; इ.स. १६३० – १६८०</p>
+
+    <div class="hero-divider" aria-hidden="true">
+      <span></span>
+      <span class="hero-divider-gem">❖</span>
+      <span></span>
+    </div>
+
+    <p class="hero-quote">
+      "प्रत्येकाच्या हाती तलवार असली तरी, राज्य स्थापन करते ती इच्छाशक्ती!"
+      <cite>— छत्रपती शिवाजी महाराज</cite>
+    </p>
+
+    <div class="hero-badges">
+      <span class="hero-badge">महान योद्धा</span>
+      <span class="hero-badge">द्रष्टा राजनीतिज्ञ</span>
+      <span class="hero-badge">जनतेचा राजा</span>
+      <span class="hero-badge">राष्ट्रपिता</span>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>खाली स्क्रोल करा</span>
+      <span>▼</span>
+    </div>
+  </header>
+
+  <!-- ==================== HISTORY / BIOGRAPHY ==================== -->
+  <section class="bio-section" id="history" aria-labelledby="history-title">
+    <div class="section-header">
+      <p class="section-eyebrow">महान कथा</p>
+      <h2 class="section-title" id="history-title">जीवन आणि वारसा</h2>
+      <div class="section-line">
+        <span></span><em>❖</em><span></span>
+      </div>
+    </div>
+
+    <div class="bio-grid">
+      <div class="bio-card fade-in">
+        <div class="bio-year">१६३०</div>
+        <div class="bio-event">शिवनेरी किल्ल्यावर जन्म</div>
+        <div class="bio-desc">जुन्नरजवळील शिवनेरी किल्ल्यावर जिजामाता आणि शहाजी भोसले यांच्या पोटी जन्म झाला. आईने त्यांना राम, कृष्ण आणि महाभारताच्या कथा सांगून बालपणापासूनच स्वराज्याचे बीज रोवले.</div>
+      </div>
+      <div class="bio-card fade-in">
+        <div class="bio-year">१६४६</div>
+        <div class="bio-event">तोरणा किल्ला जिंकला</div>
+        <div class="bio-desc">अवघ्या १६ व्या वर्षी शिवाजी महाराजांनी आदिलशाही सुलतानातीकडून तोरणा किल्ला जिंकला — मराठा स्वातंत्र्याच्या लढ्याची ही पहिली धाडसी कृती संपूर्ण देशाला हलवून गेली.</div>
+      </div>
+      <div class="bio-card fade-in">
+        <div class="bio-year">१६५९</div>
+        <div class="bio-event">प्रतापगडाची लढाई</div>
+        <div class="bio-desc">त्यांच्यापेक्षा दुप्पट शरीराचा बलाढ्य सेनापती अफजलखान याला बुद्धिमत्ता, शौर्य आणि वाघनखाच्या सहाय्याने पराभूत केले. हा क्षण मराठी अभिमान आणि रणनीतिक कौशल्याचा निर्णायक उद्गार होता.</div>
+      </div>
+      <div class="bio-card fade-in">
+        <div class="bio-year">१६६६</div>
+        <div class="bio-event">आग्र्याहून सुटका</div>
+        <div class="bio-desc">मुघल सम्राट औरंगजेबाच्या नजरकैदेत असताना, महाराजांनी बुद्धिमत्ता आणि शांत कूटनीतीच्या जोरावर फळांच्या टोपल्यांतून सुटका केली — याद्वारे हे सिद्ध झाले की खंबीर तत्त्वे आणि चाणाक्ष डावपेच कोणत्याही बंधनावर मात करू शकतात.</div>
+      </div>
+      <div class="bio-card fade-in">
+        <div class="bio-year">१६७४</div>
+        <div class="bio-event">छत्रपती पदाचा राज्याभिषेक</div>
+        <div class="bio-desc">रायगड किल्ल्यावर छत्रपती (राजाधिराज) म्हणून राज्याभिषेक झाला — सार्वभौम मराठा साम्राज्याची अधिकृत स्थापना झाली आणि संपूर्ण हिंदवी जनतेच्या स्वराज्याच्या स्वप्नाला वैधता मिळाली.</div>
+      </div>
+      <div class="bio-card fade-in">
+        <div class="bio-year">१६८०</div>
+        <div class="bio-event">अमर वारसा</div>
+        <div class="bio-desc">३ एप्रिल १६८० रोजी रायगड किल्ल्यावर स्वर्गवास झाला. परंतु त्यांनी उभारलेले साम्राज्य — किल्ले, आरमार, संस्था आणि स्वराज्याचे स्वप्न.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== QUOTE BANNER 1 ==================== -->
+  <div class="quote-banner" id="wisdom">
+    <blockquote>
+      "स्त्रियांच्या सर्व अधिकारांमध्ये सर्वश्रेष्ठ अधिकार म्हणजे मातृत्व होय."
+      <cite>— छत्रपती शिवाजी महाराज</cite>
+    </blockquote>
+  </div>
+
+  <!-- ==================== PILLARS ==================== -->
+  <section class="pillars-section" id="pillars" aria-labelledby="pillars-title">
+    <div class="section-header">
+      <p class="section-eyebrow">आठ पाया</p>
+      <h2 class="section-title" id="pillars-title">त्यांच्या महानतेचे आधारस्तंभ</h2>
+      <div class="section-line">
+        <span></span><em>❖</em><span></span>
+      </div>
+    </div>
+
+    <div class="pillars-grid" id="pillars-grid">
+      <div class="pillar-card fade-in" style="--pillar-color:#E8691C" onclick="applyFilter('नेतृत्व')">
+        <div class="pillar-icon">👑</div>
+        <div class="pillar-name">नेतृत्व</div>
+        <div class="pillar-count">१२ धडे</div>
+      </div>
+      <div class="pillar-card fade-in" style="--pillar-color:#B91C1C" onclick="applyFilter('रणनीती')">
+        <div class="pillar-icon">⚔️</div>
+        <div class="pillar-name">रणनीती</div>
+        <div class="pillar-count">१३ धडे</div>
+      </div>
+      <div class="pillar-card fade-in" style="--pillar-color:#1D6B58" onclick="applyFilter('चारित्र्य')">
+        <div class="pillar-icon">🌿</div>
+        <div class="pillar-name">चारित्र्य</div>
+        <div class="pillar-count">१० धडे</div>
+      </div>
+      <div class="pillar-card fade-in" style="--pillar-color:#7C3AED" onclick="applyFilter('शासन')">
+        <div class="pillar-icon">🏛️</div>
+        <div class="pillar-name">शासन</div>
+        <div class="pillar-count">१२ धडे</div>
+      </div>
+      <div class="pillar-card fade-in" style="--pillar-color:#047857" onclick="applyFilter('विवेक')">
+        <div class="pillar-icon">🔮</div>
+        <div class="pillar-name">विवेक</div>
+        <div class="pillar-count">१३ धडे</div>
+      </div>
+      <div class="pillar-card fade-in" style="--pillar-color:#C2410C" onclick="applyFilter('शौर्य')">
+        <div class="pillar-icon">🦁</div>
+        <div class="pillar-name">शौर्य</div>
+        <div class="pillar-count">१२ धडे</div>
+      </div>
+      <div class="pillar-card fade-in" style="--pillar-color:#A21CAF" onclick="applyFilter('श्रद्धा')">
+        <div class="pillar-icon">🪔</div>
+        <div class="pillar-name">श्रद्धा व मूल्ये</div>
+        <div class="pillar-count">८ धडे</div>
+      </div>
+      <div class="pillar-card fade-in" style="--pillar-color:#065F46" onclick="applyFilter('मुत्सद्देगिरी')">
+        <div class="pillar-icon">🤝</div>
+        <div class="pillar-name">मुत्सद्देगिरी</div>
+        <div class="pillar-count">१० धडे</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LESSONS ==================== -->
+  <section class="lessons-section" id="lessons" aria-labelledby="lessons-title">
+    <div class="section-header">
+      <p class="section-eyebrow">प्रत्येक पिढीसाठी</p>
+      <h2 class="section-title" id="lessons-title">१०१ कालातीत धडे</h2>
+      <div class="section-line">
+        <span></span><em>❖</em><span></span>
+      </div>
+    </div>
+
+    <div class="lessons-controls">
+      <div class="search-box">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input type="text" id="search" placeholder="धडे, मूल्ये किंवा इतिहास शोधा…" oninput="renderLessons()" aria-label="धडे शोधा" />
+      </div>
+    </div>
+
+    <div class="filter-pills" style="max-width:900px;margin:0 auto 1.5rem;display:flex;flex-wrap:wrap;gap:8px;">
+      <button class="filter-pill active" onclick="setFilter('सर्व',this)">सर्व १०१</button>
+      <button class="filter-pill" onclick="setFilter('नेतृत्व',this)">👑 नेतृत्व</button>
+      <button class="filter-pill" onclick="setFilter('रणनीती',this)">⚔️ रणनीती</button>
+      <button class="filter-pill" onclick="setFilter('चारित्र्य',this)">🌿 चारित्र्य</button>
+      <button class="filter-pill" onclick="setFilter('शासन',this)">🏛️ शासन</button>
+      <button class="filter-pill" onclick="setFilter('विवेक',this)">🔮 विवेक</button>
+      <button class="filter-pill" onclick="setFilter('शौर्य',this)">🦁 शौर्य</button>
+      <button class="filter-pill" onclick="setFilter('श्रद्धा',this)">🪔 श्रद्धा</button>
+      <button class="filter-pill" onclick="setFilter('मुत्सद्देगिरी',this)">🤝 मुत्सद्देगिरी</button>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="101" aria-valuenow="0" id="prog-bar">
+        <div class="progress-fill" id="prog-fill"></div>
+      </div>
+      <span class="progress-text" id="prog-text">० / १०१ अभ्यासले</span>
+    </div>
+
+    <div class="lessons-grid" id="lessons-grid" aria-live="polite"></div>
+  </section>
+
+  <!-- ==================== QUOTE BANNER 2 ==================== -->
+  <div class="quote-banner">
+    <blockquote>
+      "स्वातंत्र्य ही एक देणगी आहे, जी प्रत्येकाला मिळण्याचा अधिकार आहे."
+      <cite>— छत्रपती शिवाजी महाराज</cite>
+    </blockquote>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <svg class="footer-mudra" viewBox="0 0 120 120" aria-hidden="true"><use href="#shivray-mudra"/></svg>
+    <p class="footer-title">हर हर महादेव</p>
+    <p class="footer-sub">अमर योद्धा छत्रपती शिवाजी महाराजांना विनम्र अभिवादन</p>
+    <p class="footer-credits">श्रद्धेने निर्मित &nbsp;·&nbsp; प्रत्येक पिढीसाठी मुक्तपणे वाटले</p>
+  </footer>
+
+  <div class="ornament-border"></div>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+  /* ============================================================
+     DATA — १०१ धडे (मराठी)
+     ============================================================ */
+  const COLORS = {
+    'नेतृत्व':       '#E8691C',
+    'रणनीती':       '#B91C1C',
+    'चारित्र्य':    '#1D6B58',
+    'विवेक':         '#047857',
+    'शासन':          '#7C3AED',
+    'शौर्य':         '#C2410C',
+    'श्रद्धा':       '#A21CAF',
+    'मुत्सद्देगिरी': '#065F46'
+  };
+
+  const TAG_CLASS = {
+    'नेतृत्व':       'tag-leadership',
+    'रणनीती':       'tag-warfare',
+    'चारित्र्य':    'tag-character',
+    'विवेक':         'tag-wisdom',
+    'शासन':          'tag-governance',
+    'शौर्य':         'tag-courage',
+    'श्रद्धा':       'tag-faith',
+    'मुत्सद्देगिरी': 'tag-diplomacy'
+  };
+
+  const lessons = [
+    // नेतृत्व (१२)
+    {t:"आदर्श व्हा, आदेश देऊ नका",           d:"शिवाजी महाराज आपल्या सैनिकांच्या पुढे राहून लढले, त्यामुळे त्यांची अढळ निष्ठा मिळाली.", c:"नेतृत्व"},
+    {t:"खरा नेता जनतेची सेवा करतो",           d:"ते 'जनतेचा राजा' होते — सामान्य माणसाला नेहमी भेटण्यासाठी उपलब्ध असत.", c:"नेतृत्व"},
+    {t:"आदराने निष्ठा निर्माण करा",            d:"प्रत्येक सैनिकाला ते कुटुंबातील सदस्य मानत, त्यामुळे सारे प्रेमाने स्वराज्यासाठी बांधले गेले.", c:"नेतृत्व"},
+    {t:"पूर्ण विश्वासाने जबाबदारी द्या",       d:"तानाजी मालुसरे आणि बाजीप्रभू देशपांडे यांसारख्या शूरांना त्यांनी संपूर्ण अधिकार दिले.", c:"नेतृत्व"},
+    {t:"नेत्याने निर्णायक असले पाहिजे",        d:"युद्धात व राज्यकारभारात, क्षण आल्यावर महाराज कधीही संकोचले नाहीत.", c:"नेतृत्व"},
+    {t:"माणसाची ताकद ओळखा",                    d:"ते प्रत्येकाला त्याच्या क्षमतेनुसार काम देत — जन्म किंवा पद पाहत नसत.", c:"नेतृत्व"},
+    {t:"प्रत्येक विजयात सहकाऱ्यांचे कौतुक करा",d:"सैनिकांना जाहीरपणे सन्मान देत — त्यांनाही स्वराज्याच्या वैभवाचा भाग वाटवत.", c:"नेतृत्व"},
+    {t:"संकटात शांत राहा",                     d:"आग्र्यात औरंगजेबाच्या नजरकैदेत असतानाही महाराज स्थिर राहिले आणि महान सुटकेची योजना आखली.", c:"नेतृत्व"},
+    {t:"दृष्टीने नेतृत्व करा, अहंकाराने नाही", d:"शिवाजी महाराजांसाठी स्वराज्य हे स्वतःच्या महत्त्वाकांक्षेपेक्षा नेहमीच मोठे होते.", c:"नेतृत्व"},
+    {t:"भावी नेते घडवा",                        d:"नेताजी पालकर व हंबीरराव मोहिते यांसारख्या पिढ्या त्यांनी तयार केल्या.", c:"नेतृत्व"},
+    {t:"शब्द हीच तुमची प्रतिष्ठा आहे",         d:"शत्रूलाही दिलेले वचन पाळण्यासाठी महाराज प्रसिद्ध होते — त्यातूनच अफाट विश्वास निर्माण झाला.", c:"नेतृत्व"},
+    {t:"आदेश देण्यापेक्षा प्रेरणा द्या",        d:"त्यांच्या स्वराज्याच्या स्वप्नाने मराठ्यांमध्ये शतकानुशतके धगधगणारी ज्योत पेटवली.", c:"नेतृत्व"},
+    // रणनीती (१३)
+    {t:"भूमी हेच तुमचे शस्त्र आहे",            d:"सह्याद्रीच्या डोंगरांवर त्यांनी प्रभुत्व मिळवले — ते अभेद्य किल्ले आणि पलायनमार्ग बनले.", c:"रणनीती"},
+    {t:"शत्रूच्या अटींवर कधी लढू नका",         d:"प्रचंड मुघल सेनेशी समोरासमोर लढण्याऐवजी ते गनिमी काव्याचा उपयोग करत.", c:"रणनीती"},
+    {t:"वेग आणि अचानक हल्ला विजय देतो",        d:"वीजेच्या वेगाने केलेल्या छाप्यांमुळे शत्रूला सावरण्याचीही संधी मिळत नसे.", c:"रणनीती"},
+    {t:"गुप्तचर हे सर्वांत मोठे शस्त्र आहे",  d:"हरकारा पद्धतीने त्यांनी विशाल हेर जाळे उभारले — त्यामुळे सर्वत्र नजर होती.", c:"रणनीती"},
+    {t:"उंच ठिकाण नेहमी ताब्यात ठेवा",         d:"सह्याद्रीतील डझनभर पर्वतकिल्ले जिंकून त्यांनी धोरणात्मक वरचढ स्थान राखले.", c:"रणनीती"},
+    {t:"आरमार हेच भूमीचे संरक्षण करते",        d:"भारतातील पहिले संघटित आरमार त्यांनी उभारले — दूरदृष्टीचा हा महान धोरणात्मक निर्णय होता.", c:"रणनीती"},
+    {t:"शत्रूला स्वतःपेक्षा जास्त ओळखा",       d:"प्रत्येक मोहिमेपूर्वी महाराज शत्रूच्या बलस्थाने व कमकुवतपणाचा सखोल अभ्यास करत.", c:"रणनीती"},
+    {t:"शांततेत सज्ज राहा, युद्धात अमलात आणा",d:"किल्ले नेहमी धान्याने भरलेले व सैनिक नेहमी प्रशिक्षित असत.", c:"रणनीती"},
+    {t:"डावपेच सतत बदलत राहा",                  d:"परिस्थितीनुसार ते गनिमी काव्यापासून थेट हल्ल्यापर्यंत बदल करत.", c:"रणनीती"},
+    {t:"न लढताच जिंकणे हे सर्वोच्च आहे",       d:"चतुर वाटाघाटींद्वारे ते बऱ्याचदा उद्दिष्टे साध्य करत — अनावश्यक रक्तपात टाळत.", c:"रणनीती"},
+    {t:"रसद मार्ग जिवापाड जपा",                 d:"सैन्य पोटावर चालते हे त्यांना माहीत होते — रसद कधीच दुर्लक्षित केली नाही.", c:"रणनीती"},
+    {t:"युद्धात कूटनीती हे वैध शस्त्र आहे",    d:"वेष पालट, खोटी माघार व सापळे यांद्वारे त्यांनी कितीतरी मोठ्या सैन्यांना फसवले.", c:"रणनीती"},
+    {t:"कमकुवतपणा त्वरित बळकट करा",            d:"जिंकलेला प्रत्येक किल्ला त्वरित मजबूत केला जाई — कधी कमकुवत ठेवला नाही.", c:"रणनीती"},
+    // चारित्र्य (१०)
+    {t:"स्त्रियांचा नेहमी संपूर्ण आदर करा",    d:"त्यांनी कठोर आदेश दिले — स्त्रियांचा अपमान करणाऱ्या सैनिकाला कठोर शिक्षा होई.", c:"चारित्र्य"},
+    {t:"पराभूतांवर दया दाखवा",                  d:"पकडलेल्या शत्रूशीही ते प्रतिष्ठेने वागत — त्यामुळे शत्रूतूनही आदर मिळत असे.", c:"चारित्र्य"},
+    {t:"प्रामाणिकपणा चिरस्थायी शक्ती देतो",    d:"राजकीय व्यवहारातही ते प्रामाणिकपणासाठी प्रसिद्ध होते — त्या काळात हे दुर्मीळ होते.", c:"चारित्र्य"},
+    {t:"नम्रता हीच योद्ध्याची सर्वांत मोठी ढाल",d:"छत्रपती झाल्यावरही ते संतांना व वडीलधाऱ्यांना नम्रपणे नमस्कार करत.", c:"चारित्र्य"},
+    {t:"भावनांवर धोरणीपणाने नियंत्रण ठेवा",     d:"प्रत्येक भावना त्यांनी धोरणात रूपांतरित केली — क्रोधाने निर्णय कधी ढळला नाही.", c:"चारित्र्य"},
+    {t:"धैर्य हीच सर्वांत मोठी शक्ती आहे",     d:"बिजापूरविरुद्ध हल्ल्याआधी ते वर्षानुवर्षे थांबले — पूर्ण तयारीनंतरच पाऊल टाकले.", c:"चारित्र्य"},
+    {t:"युद्धातही निर्दोषांचे रक्षण करा",       d:"शेतकरी, व्यापारी व नागरिक युद्धाच्या थैमानापासून नेहमीच संरक्षित राहिले.", c:"चारित्र्य"},
+    {t:"बलिदान मागण्यापूर्वी विश्वास कमवा",     d:"त्यांचे सैनिक प्राण द्यायला तयार असत कारण महाराजांनी आधीच त्यांना सर्वस्व दिले होते.", c:"चारित्र्य"},
+    {t:"अपयशातून न लाजता शिका",                 d:"सुरुवातीच्या पराभवांतून डावपेच सुधारले — तीच चूक त्यांनी पुन्हा केली नाही.", c:"चारित्र्य"},
+    {t:"आत्मशिस्त ही महानतेची पहिली पायरी",    d:"आहार, व्यायाम व दैनंदिन आध्यात्मिक साधनेत त्यांनी कठोर शिस्त पाळली.", c:"चारित्र्य"},
+    // विवेक (१३)
+    {t:"लहान सुरुवात करा, अनंत स्वप्न पाहा",   d:"एका मूठभर अनुयायांनी व एकाच किल्ल्याने सुरू झालेला प्रवास साम्राज्यापर्यंत पोहोचला.", c:"विवेक"},
+    {t:"प्रत्येक समस्येवर उपाय असतो",            d:"आग्र्याच्या सुवर्णपिंजऱ्यात अडकल्यावर बळाऐवजी बुद्धीने सुटका केली.", c:"विवेक"},
+    {t:"शत्रूच्या गर्विष्ठपणाचा उपयोग करा",    d:"अफजलखानाच्या अहंकारालाच शिवाजी महाराजांनी प्रतापगडावर शस्त्र बनवले.", c:"विवेक"},
+    {t:"माणसे वाचा, केवळ पुस्तके नाही",         d:"मित्र असो वा शत्रू — माणूस ओळखण्याची त्यांची क्षमता समकालीनांमध्ये प्रसिद्ध होती.", c:"विवेक"},
+    {t:"युती करा, परावलंबन नको",                d:"धोरणात्मक युती केली, परंतु स्वतःचे सार्वभौमत्व नेहमीच अक्षुण्ण राखले.", c:"विवेक"},
+    {t:"दीर्घकालीन दृष्टी अल्पकालीन लाभापेक्षा श्रेष्ठ",d:"मुघलांचे मोहक प्रस्ताव नाकारले — स्वराज्य संपत्तीपेक्षा मोठे होते.", c:"विवेक"},
+    {t:"युद्धाचे अर्थशास्त्र समजून घ्या",        d:"शत्रूच्या खजिन्यावर धाडी घालून त्यांनी मोहिमा व जनकल्याण यासाठी निधी उभारला.", c:"विवेक"},
+    {t:"लवचिक मन कठोर तलवारीपेक्षा श्रेष्ठ",   d:"परिस्थिती बदलल्यावर ते वारंवार धोरण बदलत — अनुकूलता हीच त्यांची ताकद होती.", c:"विवेक"},
+    {t:"परिस्थिती पाहून योग्य कृती करा",         d:"कधी लढायचे, कधी वाटाघाटी कराव्यात आणि कधी सन्मानाने माघार घ्यायची हे त्यांना ठाऊक होते.", c:"विवेक"},
+    {t:"कृती करण्यापूर्वी खोलवर निरीक्षण करा", d:"कोणत्याही मोहिमेआधी महाराज महिने गुप्तचर माहिती गोळा करत व भूभाग अभ्यासत.", c:"विवेक"},
+    {t:"साधेपणाच्या आत गहन गुंतागुंत असते",    d:"त्यांचे वरवर साधे वाटणारे गनिमी डावपेच सखोल धोरणात्मक गणनेवर आधारित होते.", c:"विवेक"},
+    {t:"प्रत्येक भेटलेल्या माणसाकडून शिका",     d:"संत, सैनिक, शेतकरी व व्यापारी — सर्वांकडून ते ज्ञान आत्मसात करत.", c:"विवेक"},
+    {t:"कोणालाही कमी लेखू नका",                  d:"सर्व पार्श्वभूमींतील लोकांना त्यांनी संधी दिली — सर्वत्र छुपी प्रतिभा शोधली.", c:"विवेक"},
+    // शासन (१२)
+    {t:"न्याय आंधळा आणि त्वरित असला पाहिजे",   d:"त्यांच्या न्यायव्यवस्थेत श्रेष्ठ व सामान्य यांना समान वागणूक मिळे — त्या काळात हे क्रांतिकारी होते.", c:"शासन"},
+    {t:"कर न्याय्य असावा, शोषण नको",             d:"जाचक जहागीरदारी पद्धती नष्ट करून शेतकऱ्यांसाठी न्याय्य महसूल व्यवस्था आणली.", c:"शासन"},
+    {t:"साम्राज्य नाही, संस्था उभ्या करा",       d:"अष्टप्रधान मंडळ स्थापन केले — म्हणजे व्यक्तीच्या लहरींऐवजी व्यवस्थेने राज्य चालावे.", c:"शासन"},
+    {t:"धार्मिक स्वातंत्र्याचे कडक रक्षण करा",  d:"मशिदी व चर्चचे नुकसान करण्यास राजाज्ञेने बंदी घालून धर्मसहिष्णुता अनिवार्य केली.", c:"शासन"},
+    {t:"स्थानिक प्रशासकांना अधिकार द्या",        d:"गावच्या पाटलांवर आणि स्थानिक नेत्यांवर त्यांनी विश्वास ठेवला — शासन जनतेजवळ राहिले.", c:"शासन"},
+    {t:"समृद्धीसाठी पायाभूत सुविधा बांधा",       d:"रस्ते, बंधारे व जलव्यवस्था उभारल्या — जनकल्याणातूनच निष्ठा निर्माण होते हे त्यांना ठाऊक होते.", c:"शासन"},
+    {t:"बलाढ्य आरमार म्हणजे बलाढ्य राष्ट्र",   d:"नौदल पायाभूत सुविधा, बंदरे व सागरी व्यापारमार्गांवर त्यांनी भरपूर गुंतवणूक केली.", c:"शासन"},
+    {t:"अचूक नोंदी नेहमी ठेवा",                  d:"शेतजमीन, महसूल, सैनिक व रसद यांची सविस्तर नोंद ठेवली जाई.", c:"शासन"},
+    {t:"गुणवत्तेला बक्षीस द्या, जन्माला नाही",   d:"क्षमतेनुसार पदोन्नती केली — जाती व वर्गाचे अडसर संपूर्ण सेनेत मोडून काढले.", c:"शासन"},
+    {t:"शेतकऱ्यांचे कल्याण हीच राज्याची संपत्ती",d:"कृषी धोरणाचे ते स्वतः पुनरावलोकन करत — शेतकऱ्यांना दुष्काळ व शोषणापासून संरक्षण दिले.", c:"शासन"},
+    {t:"नियंत्रण व संतुलन निर्माण करा",           d:"राजा असतानाही अष्टप्रधान मंडळाला सल्ला देण्याचे व निर्णय तपासण्याचे अधिकार होते.", c:"शासन"},
+    {t:"जनतेची भाषा बोला",                        d:"दरबारात फारसीऐवजी मराठीला प्रोत्साहन दिले — शासन सामान्य माणसाशी जोडले.", c:"शासन"},
+    // शौर्य (१२)
+    {t:"शौर्य ही भावना नव्हे, ती निवड आहे",     d:"भीती नव्हती म्हणून नव्हे, तर स्वराज्याची मागणी होती म्हणून ते युद्धभूमीवर उतरले.", c:"शौर्य"},
+    {t:"योग्य प्रसंगी धाडसी जोखीम घ्या",         d:"अफजलखानाचा वध — सर्वांना भयावह वाटणारी मोहीम — महाराजांनी शांतपणे पार पाडली.", c:"शौर्य"},
+    {t:"अशक्याला सृजनशीलतेने सामोरे जा",        d:"स्वराज्याचे स्वप्न जगत राहिले कारण अत्यंत कठीण प्रसंगी सेनापती पुढे येऊन जबाबदारी घेत.", c:"शौर्य"},
+    {t:"जुलुमाला कधीही झुकू नका",                d:"सर्व बाजूंनी वेढलेले असतानाही ते मुघल वर्चस्वाला झुकले नाहीत.", c:"शौर्य"},
+    {t:"जवळपास काहीही नसताना सुरुवात करण्याचे धाडस दाखवा",d:"किशोरवयात जवळपास काहीही नसताना त्यांनी स्वराज्याचे स्वप्न सुरू केले.", c:"शौर्य"},
+    {t:"सर्वात वाईट परिस्थितीसाठी मनाची तयारी करा",d:"सदैव आकस्मिक योजना होती — शौर्य तयारीवर आधारित होते, आंधळ्या धाडसावर नव्हे.", c:"शौर्य"},
+    {t:"कीर्तीसाठी नव्हे, ध्येयासाठी जगा व मरा", d:"व्यक्तिगत यशासाठी नाही तर जनतेच्या स्वातंत्र्यासाठी लढायला त्यांनी सैनिकांना शिकवले.", c:"शौर्य"},
+    {t:"विश्वासघाताला धोरणी स्थैर्याने सामोरे जा",d:"विश्वासू माणसे फुटली तेव्हाही महाराजांनी रागाने नव्हे, तर शांतपणे व धोरणाने प्रतिसाद दिला.", c:"शौर्य"},
+    {t:"अशक्य वाटणाऱ्या परिस्थितीतही टिकून राहा",d:"पुरंदरच्या तहात किल्ले गेले, पण ते पुन्हा धीराने उभे राहिले आणि सर्व परत मिळवले.", c:"शौर्य"},
+    {t:"तुमची इच्छाशक्ती कोणताही पिंजरा तोडू शकते",d:"औरंगजेबाच्या आग्र्यातून केलेली सुटका हा सर्वोत्तम पुरावा आहे की इच्छाशक्ती भिंती तोडते.", c:"शौर्य"},
+    {t:"तत्त्वांसाठी एकट्याने उभे राहा",          d:"स्वराज्याला धोका निर्माण झाल्यावर मुघल, आदिलशाही वा पोर्तुगीज — कोणत्याही शक्तीला त्यांनी विरोध केला.", c:"शौर्य"},
+    {t:"शौर्य सभोवतालच्यांमध्ये संक्रमित होते",   d:"त्यांचे वैयक्तिक शौर्य सेनेत अग्नीसारखे पसरत असे — सामान्य माणूस असाधारण बनत असे.", c:"शौर्य"},
+    // श्रद्धा व मूल्ये (८)
+    {t:"श्रद्धा खऱ्या अशक्याला शक्य करते",       d:"मातृभूमीला माता भवानी मानल्याने त्यांच्यात व सैनिकांमध्ये अभंग आंतरिक बळ निर्माण झाले.", c:"श्रद्धा"},
+    {t:"सर्व धर्ममार्गांचा आदर करा",              d:"ते सर्व श्रद्धा व आध्यात्मिक परंपरांचा आदर करत — स्वराज्याचे जीवंत सार्वभौमत्व धर्माच्या भेदांपलीकडे होते.", c:"श्रद्धा"},
+    {t:"श्रद्धेचे रक्षण विवेकाने करा",  d:"राष्ट्रहित आणि स्वराज्य सर्वोच्च मानून सर्व धर्मांचा सन्मान राखला, पण धर्माच्या नावाखाली राष्ट्राला धोका निर्माण करणाऱ्या प्रवृत्तीवर कठोर कायदेशीर मृत्युदंड कारवाई केली.", c:"श्रद्धा"},
+    {t:"आईचा आशीर्वाद हेच सर्वांत मोठे कवच",   d:"जिजामातांच्या संस्काराने त्यांचा प्रत्येक निर्णय घडला — त्या त्यांच्या पहिल्या गुरू होत्या.", c:"श्रद्धा"},
+    {t:"परमेश्वराची सेवा म्हणजेच लोकसेवा",       d:"त्यांनी मंदिरे बांधली पण गरीबांनाही अन्न दिले — देव आणि माणूस यांत भेद मानला नाही.", c:"श्रद्धा"},
+    {t:"प्रत्येक कृतीत पवित्राची भावना जपा",     d:"संतांचे मार्गदर्शन घेत ते सजग राहिले — श्रद्धा विवेकाने पाळली जाईल यावर ते दक्ष असत.", c:"श्रद्धा"},
+    {t:"मूल्ये युद्धातही अटळ असतात",              d:"कोणत्याही लष्करी गरजेसाठीही त्यांनी आचारसंहितेशी कधी तडजोड केली नाही.", c:"श्रद्धा"},
+    {t:"तुमच्या दृष्टीला आकार देणाऱ्यांचा आदर करा",d:"जिजामाता, संत तुकाराम  यांच्याबद्दल कृतज्ञता त्यांनी आजीवन व्यक्त केली.", c:"श्रद्धा"},
+    // मुत्सद्देगिरी (१०)
+    {t:"सामर्थ्याच्या जागी वाटाघाटी करा",         d:"लष्करी वरचढ स्थान मिळाल्यावरच ते शांतता चर्चेत उतरत — कधीही गरजेपोटी नाही.", c:"मुत्सद्देगिरी"},
+    {t:"तह हा विश्रांतीचा काळ असतो, पराभव नव्हे",d:"पुरंदरचा तह ही रणनीतिक माघार होती — नंतर ते सर्व किल्ले परत मिळवले.", c:"मुत्सद्देगिरी"},
+    {t:"कधी शांतता निवडायची हे जाणा",            d:"खरोखर महत्त्वाच्या युद्धांसाठी सेना राखण्यासाठी ते निवडक लढाया लढत.", c:"मुत्सद्देगिरी"},
+    {t:"वेगवेगळ्या व अनपेक्षित मित्रांशी युती करा",d:"मराठा सरदार, किनारपट्टीचे व्यापारी आणि काही मुघल सरदारांशीही धोरणीपणे युती केली.", c:"मुत्सद्देगिरी"},
+    {t:"प्रतिस्पर्ध्याच्या दबावाचे आकलन करा",     d:"मुघल दरबारातील अंतर्गत ताण त्यांनी स्वतःच्या फायद्यासाठी कुशलतेने वापरले.", c:"मुत्सद्देगिरी"},
+    {t:"पुढची चाल कधीच उघड करू नका",             d:"संपूर्ण गोपनीयता राखली — शत्रूला उशिरापर्यंत त्यांचे डाव कळत नसत.", c:"मुत्सद्देगिरी"},
+    {t:"शत्रूंनी तुम्हाला कमी लेखू द्या",         d:"मुघलांनी त्यांना 'पर्वतातील योद्धा' म्हणून हिणवले — हीच चूक त्यांना महागात पडली.", c:"मुत्सद्देगिरी"},
+    {t:"प्रतीकात्मकतेत प्रचंड धोरणात्मक शक्ती असते",d:"छत्रपती पदाचा राज्याभिषेक हा मराठा सार्वभौमत्वाला वैध ठरवणारा महान मुत्सद्दी निर्णय होता.", c:"मुत्सद्देगिरी"},
+    {t:"प्रत्येक देवाणघेवाणीत प्रतिष्ठा टिकवा",   d:"मुत्सद्देगिरी सदैव कार्यरत असते. महाराजांनी मूळ भूमिका कधी बदलली नाही, पण आग्र्यासारख्या कठीण क्षणीही तर्क व डावपेच चाणाक्षपणे बदलले.", c:"मुत्सद्देगिरी"},
+    {t:"जमिनीवर अपरिवर्तनीय वास्तव निर्माण करा",  d:"जिंकलेला प्रत्येक किल्ला एक नवी वस्तुस्थिती होती — बचाव करणे सोपे पण वाटाघाटींत सोडणे कठीण.", c:"मुत्सद्देगिरी"},
+    // अंतिम ३ (विविध)
+    {t:"सतत सज्जतेने स्वराज्य टिकते",
+     d:"स्वातंत्र्य केवळ सेनेने नाही तर बळकट संस्था, जबाबदार नागरिक आणि स्पष्ट दृष्टी यांनी राखले जाते. विचारात, संरक्षणात व शासनात सज्जता ही सार्वभौमत्वाची हमी आहे.",
+     c:"विवेक"},
+    {t:"आर्थिक स्वातंत्र्यच खऱ्या स्वराज्याचा आधार",
+     d:"जे राष्ट्र संसाधने, ज्ञान वा उत्पादनासाठी परावलंबी असते ते हळूहळू स्वातंत्र्य गमावते. स्थानिक अर्थव्यवस्था, नवोन्मेष व स्वावलंबन बळकट केल्यानेच राजकीय सार्वभौमत्व अर्थपूर्ण राहते.",
+     c:"चारित्र्य"},
+    {t:"विवेकी निर्णयांतूनच स्वातंत्र्य उभे राहते",
+     d:"तोरणा किल्ला जिंकण्यापासून बळकट शासन व्यवस्था उभारण्यापर्यंत प्रत्येक निर्णयाने स्वराज्य दृढ केले. नेतृत्वासाठी धाडसाने कृती करताना जनतेचे दीर्घकालीन स्वातंत्र्य नेहमी अग्रस्थानी असावे.",
+     c:"शौर्य"},
+  ];
+
+  /* ============================================================
+     STATE
+     ============================================================ */
+  let done = new Set();
+  let activeFilter = 'सर्व';
+
+  /* ============================================================
+     FILTER
+     ============================================================ */
+  function setFilter(cat, btn) {
+    activeFilter = cat;
+    document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    renderLessons();
+    document.getElementById('lessons').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function applyFilter(cat) {
+    activeFilter = cat;
+    document.querySelectorAll('.filter-pill').forEach(b => {
+      b.classList.toggle('active', b.textContent.trim().includes(cat));
+    });
+    renderLessons();
+    setTimeout(() => document.getElementById('lessons').scrollIntoView({ behavior: 'smooth' }), 100);
+  }
+
+  /* ============================================================
+     RENDER
+     ============================================================ */
+  function renderLessons() {
+    const search = document.getElementById('search').value.toLowerCase().trim();
+    const grid = document.getElementById('lessons-grid');
+
+    const filtered = lessons.filter(l => {
+      const matchCat = activeFilter === 'सर्व' || l.c === activeFilter;
+      const matchSearch = !search
+        || l.t.toLowerCase().includes(search)
+        || l.d.toLowerCase().includes(search)
+        || l.c.toLowerCase().includes(search);
+      return matchCat && matchSearch;
+    });
+
+    if (!filtered.length) {
+      grid.innerHTML = '<div class="no-results">कोणताही धडा आढळला नाही. वेगळा शोध किंवा फिल्टर वापरून पहा.</div>';
+      return;
+    }
+
+    grid.innerHTML = filtered.map(l => {
+      const idx = lessons.indexOf(l);
+      const num = (idx + 1).toString().padStart(3, '0');
+      const col  = COLORS[l.c] || '#888';
+      const tagCls = TAG_CLASS[l.c] || 'tag-wisdom';
+      const isDone = done.has(idx);
+      return `
+      <article class="lesson-card${isDone ? ' studied' : ''}"
+        style="--card-accent:${col}"
+        onclick="toggleStudied(${idx})"
+        aria-label="धडा ${num}: ${l.t}"
+        role="button"
+        tabindex="0"
+        onkeydown="if(event.key==='Enter'||event.key===' ')toggleStudied(${idx})">
+        <div class="card-header">
+          <span class="lesson-num">#${num}</span>
+          <span class="lesson-title">${l.t}</span>
+          <button class="check-btn"
+            aria-label="${isDone ? 'अभ्यासलेले रद्द करा' : 'अभ्यासलेले म्हणून चिन्हांकित करा'}"
+            onclick="event.stopPropagation();toggleStudied(${idx})">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 6L5 9L10 3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <p class="lesson-desc">${l.d}</p>
+        <div class="lesson-footer">
+          <span class="lesson-tag ${tagCls}">${l.c}</span>
+        </div>
+      </article>`;
+    }).join('');
+  }
+
+  function toggleStudied(idx) {
+    if (done.has(idx)) done.delete(idx); else done.add(idx);
+    updateProgress();
+    renderLessons();
+  }
+
+  function updateProgress() {
+    const total = lessons.length;
+    const pct   = Math.round((done.size / total) * 100);
+    document.getElementById('prog-fill').style.width = pct + '%';
+    document.getElementById('prog-text').textContent  = done.size + ' / ' + total + ' अभ्यासले';
+    document.getElementById('prog-bar').setAttribute('aria-valuenow', done.size);
+  }
+
+  /* ============================================================
+     INTERSECTION OBSERVER — fade-in animations
+     ============================================================ */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  /* ============================================================
+     INIT
+     ============================================================ */
+  renderLessons();
+  </script>
+
+</body>
+</html>
